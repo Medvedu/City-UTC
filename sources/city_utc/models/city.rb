@@ -21,6 +21,7 @@ module CityUTC
     # biggest population.
     #
     # @param [String] city_name
+    #   TODO improve performance with method adaptation to work with Array<String>
     #
     # @return [String]
     #   Returns +"NilZone"+ when nothing was found.
