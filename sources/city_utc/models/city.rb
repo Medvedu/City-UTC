@@ -1,6 +1,17 @@
 # encoding: utf-8
 # frozen_string_literal: true
 module CityUTC
+  # == Schema for `cities` table
+  #
+  #   CREATE TABLE `cities` (
+  #     `id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+  #     `city`	TEXT,
+  #     `country`	TEXT,
+  #     `latitude`	REAL,
+  #     `longitude`	REAL,
+  #     `population`	INTEGER,
+  #     `timezone_code`	INTEGER
+  #   );
   class City < Sequel::Model
 
     ##

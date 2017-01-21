@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'spec_helper'
 
-describe "As database." do
+describe "As database" do
   it 'it creates valid Sequel::Model relation for Cities table' do
     cities = CityUTC::City
 
@@ -12,4 +12,4 @@ describe "As database." do
                  .to_a.collect(&:city)
     ).to contain_exactly "tokyo", "shanghai", "bombay"
   end
-end # describe "As database."
+end # describe "As database"

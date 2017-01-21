@@ -4,7 +4,7 @@ require 'net/http'
 
 # To pass this tests launch the server!
 # TODO add rspec helper to check server state and launch up when s isn't started
-describe "As Web Server." do
+describe "As web application" do
   context 'When client sends valid request' do
     it 'returns time' do
       uri = URI('http://127.0.0.1/time?')
@@ -43,7 +43,7 @@ describe "As Web Server." do
 
       expect(response.body).to match /UNKNOWN/
     end
-  end # context 'valid request'
+  end # context 'When client sends valid request'
 
   # ----------------------------------------------------
 
@@ -59,5 +59,5 @@ describe "As Web Server." do
       expect(response.body)
         .to match /Please use get http request for 'time' api endpoint/
     end
-  end # context 'invalid request'
-end # describe "As Web Server. When client sends"
+  end # context 'When client sends invalid request'
+end # describe "As web application"

@@ -28,8 +28,8 @@ module CityUTC
     # Presents time instance as pretty formatted string.
     #
     # @example
-    #   time # ==> 2017-01-13 12:37:34 UTC
-    #   formatted(time) # ==> "UTC: 2017-01-13 12:37:34"
+    #   time                   # ==> 2017-01-13 12:37:34 UTC
+    #   pretty_formatted(time) # ==> "UTC: 2017-01-13 12:37:34"
     #
     # @param [Time] time
     #

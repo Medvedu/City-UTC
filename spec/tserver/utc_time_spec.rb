@@ -8,7 +8,7 @@ module CityUTC
       allow(Time).to receive(:now).and_return local_time
     end
 
-    context '#by_location' do
+    context '#for_city' do
       it "returns +'UNKNOWN'+ when +:local_location+ unrecognized" do
         expect(described_class.for_city('there_is_no_city_with_dat_name'))
           .to be_eql "UNKNOWN"
@@ -29,11 +29,11 @@ module CityUTC
         expect(described_class.for_city('Ufa').to_s)
           .to be_eql("Ufa: 2015-04-11 15:30:50")
       end
-    end # context '#by_location'
+    end # context '#for_city'
 
     # ----------------------------------------------------
 
-    context '#formatted' do
+    context '#pretty_formatted' do
       it 'presents time as expected(formatted string)' do
         expect(described_class.pretty_formatted(Time.now.utc))
           .to be_eql("UTC: 2015-04-11 10:30:50")
@@ -43,6 +43,6 @@ module CityUTC
         expect(described_class.pretty_formatted(Time.now.utc, "PREFIX"))
           .to be_eql("PREFIX: 2015-04-11 10:30:50")
       end
-    end # context '#formatted'
+    end # context '#pretty_formatted'
   end # describe CityUTC
 end # module CityUTC

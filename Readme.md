@@ -1,13 +1,29 @@
-# City-UTC (database + server)
+# City-UTC
 ## Description
 
-Simple UTC Server (Yet another geocode solution, based on sqlite database)
+This project consist of two parts. First part includes sqlite database with two tables:
+
+**Cities**
+
+| id | city | country | latitude | longitude | population | timezone_code |
+|----|------|---------|----------| ----------|------------|--------------:|
+| .. | ...  | ......  | ........ | ......... | .......... | ............. |
+
+**Timezones**
+
+| timezone | code |
+|----------|------|
+| .......  | .... |
+
+You can work with this table throw sequel orm.
+
+And second part is web-server to work with this table. It getting city name and returns utc time in specified city. If there more than one city with same name it returns city with biggest population.
 
 ## Installation
 
 ```bash
   $ bundle install
-  $ bundle exec restore_database! 
+  $ bundle exec rake restore_database! 
 ```
 
 ## Usage
