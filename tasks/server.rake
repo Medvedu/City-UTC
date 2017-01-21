@@ -1,7 +1,7 @@
 # encoding: utf-8
 # frozen_string_literal: true
 desc 'Launches web-server for CityUTC'
-task :launch_city_utc_web_app! do
+task :launch_web_server! do
   settings = [
     '--max-conns 2048',
     '--address 127.0.0.1',

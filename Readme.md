@@ -15,15 +15,14 @@ This project consist of two parts. First part includes sqlite database with two 
 |----------|------|
 | .......  | .... |
 
-You can work with this table throw sequel orm.
+You can work with this tables throw Sequel ORM.
 
-And second part is web-server to work with this table. It getting city name and returns utc time in specified city. If there more than one city with same name it returns city with biggest population.
+And second part is web application to work with the database. It receives city name and responce with UTC time for this city. If there more than one city with chosen name it returns a city with biggest population.
 
 ## Installation
 
 ```bash
   $ bundle install
-  $ bundle exec rake restore_database! 
 ```
 
 ## Usage
@@ -52,10 +51,10 @@ And second part is web-server to work with this table. It getting city name and 
 
   * Ruby 2.1.0
   * gzip
-  * sqlite3,  ~> 1.3.13
-  * sequel,   ~> 4.42.1
   * thin      ~> 1.7.0
   * sinatra,  ~> 1.4.7
+  * sqlite3,  ~> 1.3.13
+  * sequel,   ~> 4.42.1
   * timezone  ~> 1.0
 
 ## License

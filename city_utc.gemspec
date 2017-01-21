@@ -19,9 +19,9 @@ Gem::Specification.new do |s|
     "This project consist of two parts\n",
 
     "First part includes sqlite database with two tables based on",
-    "worldcitiespop.csv (http://download.maxmind.com/download/):\n",
-    "cities(city, country, latitude, longitude, population, timezone_code)\n",
-    "timezones(timezone, code)\n\n",
+    "worldcitiespop.csv (http://download.maxmind.com/download/):",
+    "cities(city, country, latitude, longitude, population, timezone_code);",
+    "timezones(timezone, code).",
 
     "Second part is sinatra (web) application for work with the database throw Sequel ORM."
   ].join(' ')
